@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm Bài Đăng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <a th:href="@{/}"> <h3>Tạo Bài Đăng</h3></a>
+    <hr>
+    <form action="#" th:action="@{/admin/save}" th:object="${house}" method="post" >
+        <input type="text" th:field="*{address}" placeholder="Nhập địa chỉ phòng:" class="form-control w-25 mb-4">
+        <input type="text" th:field="*{price}" placeholder="Nhập Giá Thuê Phòng:" class="form-control w-25 mb-4">
+        <input type="text" th:field="*{description}" placeholder="Nhập Mô Tả Về Phòng:" class="form-control w-25 mb-4">
+        <input type="text" th:field="*{title}" placeholder="Nhập Tiêu Đề:" class="form-control w-25 mb-4">
+        <input type="text" th:field="*{phone}" placeholder="Nhập Số Điện thoại thuê phòng:" class="form-control w-25 mb-4">
+        <button type="submit" class="btn btn-success col-2">Lưu</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
